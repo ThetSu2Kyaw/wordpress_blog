@@ -1,0 +1,192 @@
+[1722308050.9927] Error running :
+SELECT option_name, option_value FROM wp_options WHERE autoload = 'yes'
+---- converted to ----
+SELECT option_name, option_value FROM wp_options WHERE autoload = 'yes'
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_name, option_value FROM wp_options WHERE autol...
+                                              ^
+---------------------
+[1722308050.9949] Error running :
+SELECT option_name, option_value FROM wp_options
+---- converted to ----
+SELECT option_name, option_value FROM wp_options
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_name, option_value FROM wp_options
+                                              ^
+---------------------
+[1722308050.9961] Error running :
+SELECT option_value FROM wp_options WHERE option_name = 'siteurl'
+---- converted to ----
+SELECT option_value FROM wp_options WHERE option_name = 'siteurl'
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_value FROM wp_options WHERE option_name = 'sit...
+                                 ^
+---------------------
+[1722308053.6718] Error running :
+SELECT option_name, option_value FROM wp_options WHERE autoload = 'yes'
+---- converted to ----
+SELECT option_name, option_value FROM wp_options WHERE autoload = 'yes'
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_name, option_value FROM wp_options WHERE autol...
+                                              ^
+---------------------
+[1722308053.6734] Error running :
+SELECT option_name, option_value FROM wp_options
+---- converted to ----
+SELECT option_name, option_value FROM wp_options
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_name, option_value FROM wp_options
+                                              ^
+---------------------
+[1722308053.675] Error running :
+SELECT option_value FROM wp_options WHERE option_name = 'siteurl'
+---- converted to ----
+SELECT option_value FROM wp_options WHERE option_name = 'siteurl'
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_value FROM wp_options WHERE option_name = 'sit...
+                                 ^
+---------------------
+[1722308061.7977] Error running :
+SELECT option_name, option_value FROM wp_options WHERE autoload = 'yes'
+---- converted to ----
+SELECT option_name, option_value FROM wp_options WHERE autoload = 'yes'
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_name, option_value FROM wp_options WHERE autol...
+                                              ^
+---------------------
+[1722308061.8007] Error running :
+SELECT option_name, option_value FROM wp_options
+---- converted to ----
+SELECT option_name, option_value FROM wp_options
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_name, option_value FROM wp_options
+                                              ^
+---------------------
+[1722308061.8023] Error running :
+SELECT option_value FROM wp_options WHERE option_name = 'siteurl'
+---- converted to ----
+SELECT option_value FROM wp_options WHERE option_name = 'siteurl'
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_value FROM wp_options WHERE option_name = 'sit...
+                                 ^
+---------------------
+[1722308077.1358] Error running :
+SELECT option_name, option_value FROM wp_options WHERE autoload = 'yes'
+---- converted to ----
+SELECT option_name, option_value FROM wp_options WHERE autoload = 'yes'
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_name, option_value FROM wp_options WHERE autol...
+                                              ^
+---------------------
+[1722308077.1385] Error running :
+SELECT option_name, option_value FROM wp_options
+---- converted to ----
+SELECT option_name, option_value FROM wp_options
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_name, option_value FROM wp_options
+                                              ^
+---------------------
+[1722308077.14] Error running :
+SELECT option_value FROM wp_options WHERE option_name = 'siteurl'
+---- converted to ----
+SELECT option_value FROM wp_options WHERE option_name = 'siteurl'
+----> ERROR:  relation "wp_options" does not exist
+LINE 1: SELECT option_value FROM wp_options WHERE option_name = 'sit...
+                                 ^
+---------------------
+[1722835543.6015] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722835943.4747] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722835960.2217] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722835971.4668] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722835977.789] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722836027.1962] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722836032.0145] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722836374.1499] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722836388.1864] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722836451.7973] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722836466.9431] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
+[1722836527.577] Error running :
+SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM wp_posts  WHERE post_type = 'post' AND post_status = 'publish' GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC 
+---- converted to ----
+SELECT EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, count( "ID" ) as posts, EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY EXTRACT(YEAR FROM post_date) AS year, EXTRACT(MONTH FROM post_date) AS month, EXTRACT(MONTH FROM post_date) ORDER BY post_date
+----> ERROR:  syntax error at or near "FROM"
+LINE 1: ... EXTRACT(MONTH FROM post_date) ORDER BY post_date FROM wp_po...
+                                                             ^
+---------------------
